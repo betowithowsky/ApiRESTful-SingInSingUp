@@ -36,11 +36,7 @@ module.exports = app => {
     singIn.post(async (req, res) => {
         const { email, senha } = req.body;
 
-        const user = await User.findOne({ email }, (error, user) => {
-            if(error) return done(error, user);
-            user.ultimo_login = Date.now();
-            done(error, user);
-        });
+        const user = await User.findOne({ email });
 
         if (!user) {
             return res.status(401).send({ mensagem: 'Usuário e/ou senha inválidos' });
