@@ -1,12 +1,10 @@
 # API RESTful Sing up/Sing in
 
-## Tutorial
-
-### Cadastro / SingUp
+## Cadastro / SingUp
 
 > POST: https://apirestful-testsky.herokuapp.com/singup
 
-Endpoint SingUp recebe um objeto JSON com os seguintes campos:
+**SingUp recebe um objeto JSON com os seguintes campos:**
 nome, email, senha e uma lista de objetos telefone
 
 ex:
@@ -42,11 +40,11 @@ ex:
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyN2ZmZGI4LTI4ZGEtNzgwNS1iYzkyLWRjNDVkYTZlNGNmOCIsImlhdCI6MTU1NTEzMzE0OSwiZXhwIjoxNTU1MTM0OTQ5fQ.QeLSSnbMwtcLxeM3SE6exkHLrcz8nXXDAvgRoj6j9vk"
 }
 ```
-### Login / SingIn
+## Login / SingIn
 
 > POST: https://apirestful-testsky.herokuapp.com/singin
 
-Endpoint Singin recebe um objeto JSON com E-mail e Senha.
+**SingIn recebe um objeto JSON com E-mail e Senha.**
 *Caso o email e senha estejam correto a API retornará o usuario*
 
 Ex:
@@ -81,11 +79,11 @@ Ex:
 }
 ```
 
-### Buscar Usuario / SingIn
+## Buscar Usuario / SingIn
 
 > POST: https://apirestful-testsky.herokuapp.com/search/:id
 
-Endpoint Search deve conter no Header Authorization com o valor Bearer { token } e o Id do Usuario no Path.
+**Search deve conter no Header Authorization com o valor Bearer { token } e o Id do Usuario no Path.**
 *Caso o ID do path seja o mesmo ID retornado pelo token ele retorna o Usuario*
 
 *Response*
