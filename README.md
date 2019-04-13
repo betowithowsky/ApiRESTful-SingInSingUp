@@ -44,7 +44,7 @@ ex:
 
 > POST: https://apirestful-testsky.herokuapp.com/singin
 
-__SingIn recebe um objeto JSON com E-mail e Senha.__
+__SingIn recebe um objeto JSON com E-mail e Senha.__<br>
 *Caso o email e senha estejam correto a API retornará o usuario*
 
 Ex:
@@ -83,7 +83,7 @@ Ex:
 
 > POST: https://apirestful-testsky.herokuapp.com/search/:id
 
-__Search deve conter no Header Authorization com o valor Bearer { token } e o Id do Usuario no Path.__
+__Search deve conter no Header Authorization com o valor Bearer { token } e o Id do Usuario no Path.__<br>
 *Caso o ID do path seja o mesmo ID retornado pelo token ele retorna o Usuario*
 
 *Response*
