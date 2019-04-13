@@ -4,7 +4,7 @@
 
 > POST: https://apirestful-testsky.herokuapp.com/singup
 
-__SingUp recebe um objeto JSON com os seguintes campos:__
+__SingUp recebe um objeto JSON com os seguintes campos:__<br>
 nome, email, senha e uma lista de objetos telefone
 
 ex:
