@@ -7,7 +7,8 @@
 __SingUp recebe um objeto JSON com os seguintes campos:__<br>
 nome, email, senha e uma lista de objetos telefone
 
-ex:
+*Requisition*
+
 ```
 {
 	"nome": "test",
@@ -47,7 +48,8 @@ ex:
 __SingIn recebe um objeto JSON com E-mail e Senha.__<br>
 *Caso o email e senha estejam correto a API retornará o usuario*
 
-Ex:
+*Requisition*
+
 ```
 {
 	"email": "test@test.com.br",
