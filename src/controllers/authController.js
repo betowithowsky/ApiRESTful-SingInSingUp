@@ -14,10 +14,11 @@ function generateToken(params = {}) {
 }
 
 module.exports = app => {
-
+    
     let singUp = app.route('/singup');
     let singIn = app.route('/singin');    
-    let search = app.route('/search/:id', authMiddleware);
+    app.use(authMiddleware);
+    let search = app.route('/search/:id');
 
     singUp.post(async (req, res) => {        
         try {
@@ -28,7 +29,8 @@ module.exports = app => {
                 token: generateToken({ id: user.id })
             });
         } catch (err) {
-            return res.status(400).send({ mensagem: 'E-mail já existente.' });
+            return res.status(400).send({ mensagem: err });
+            //return res.status(400).send({ mensagem: 'E-mail já existente.' });
         }
     });
 
@@ -36,6 +38,7 @@ module.exports = app => {
         const { email, senha } = req.body;
 
         const user = await User.findOne({ email });
+        //user.set("ultimo_login", Date.now());
 
         if (!user) {
             return res.status(401).send({ mensagem: 'Usuário e/ou senha inválidos' });
@@ -50,7 +53,8 @@ module.exports = app => {
             token: generateToken({ id: user.id })
         });
 
-        //await user.save();
+        await user.updateOne({ ultimo_login: Date.now() });
+        
     });
 
     search.get(async (req, res) => {

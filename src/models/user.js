@@ -59,7 +59,7 @@ UserSchema.pre('save', async function (next) {
     const hash = await bcrypt.hash(this.senha, 5);
     this.senha = hash;
     this.id = guid.raw();
-
+    console.log("sucesso");
     next();
 });
 
