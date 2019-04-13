@@ -29,8 +29,7 @@ module.exports = app => {
                 token: generateToken({ id: user.id })
             });
         } catch (err) {
-            return res.status(400).send({ mensagem: err });
-            //return res.status(400).send({ mensagem: 'E-mail já existente.' });
+            return res.status(400).send({ mensagem: 'E-mail já existente.' });
         }
     });
 
