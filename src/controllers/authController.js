@@ -57,13 +57,9 @@ module.exports = app => {
     search.get(async (req, res) => {
         
         const id = req.userId;
-        const tokenAuth = req.tokenAuth;
-        const authHeader = req.headers.authorization;
+        const idSearch = req.params.id;
 
-        const parts = authHeader.split(' ');
-        const [scheme, token] = parts;
-
-        if(tokenAuth !== token){
+        if(id !== idSearch){
             return res.status(401).send({ mensagem: 'Não autorizado' });
         }
 
