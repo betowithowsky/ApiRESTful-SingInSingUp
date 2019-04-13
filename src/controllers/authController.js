@@ -37,7 +37,7 @@ module.exports = app => {
         const { email, senha } = req.body;
 
         const user = await User.findOne({ email });
-        //user.set("ultimo_login", Date.now());
+        await user.updateOne({ ultimo_login: Date.now() });
 
         if (!user) {
             return res.status(401).send({ mensagem: 'Usuário e/ou senha inválidos' });
@@ -51,8 +51,6 @@ module.exports = app => {
             user,
             token: generateToken({ id: user.id })
         });
-
-        await user.updateOne({ ultimo_login: Date.now() });
         
     });
 
