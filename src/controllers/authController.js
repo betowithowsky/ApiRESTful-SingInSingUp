@@ -16,9 +16,8 @@ function generateToken(params = {}) {
 module.exports = app => {
 
     let singUp = app.route('/singup');
-    let singIn = app.route('/singin');
-    app.use(authMiddleware);
-    let search = app.route('/search/:id');
+    let singIn = app.route('/singin');    
+    let search = app.route('/search/:id', authMiddleware);
 
     singUp.post(async (req, res) => {        
         try {
