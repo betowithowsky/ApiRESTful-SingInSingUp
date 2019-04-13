@@ -4,7 +4,7 @@
 
 > POST: https://apirestful-testsky.herokuapp.com/singup
 
-**SingUp recebe um objeto JSON com os seguintes campos:**
+__SingUp recebe um objeto JSON com os seguintes campos:__
 nome, email, senha e uma lista de objetos telefone
 
 ex:
@@ -44,7 +44,7 @@ ex:
 
 > POST: https://apirestful-testsky.herokuapp.com/singin
 
-**SingIn recebe um objeto JSON com E-mail e Senha.**
+__SingIn recebe um objeto JSON com E-mail e Senha.__
 *Caso o email e senha estejam correto a API retornará o usuario*
 
 Ex:
@@ -83,7 +83,7 @@ Ex:
 
 > POST: https://apirestful-testsky.herokuapp.com/search/:id
 
-**Search deve conter no Header Authorization com o valor Bearer { token } e o Id do Usuario no Path.**
+__Search deve conter no Header Authorization com o valor Bearer { token } e o Id do Usuario no Path.__
 *Caso o ID do path seja o mesmo ID retornado pelo token ele retorna o Usuario*
 
 *Response*
