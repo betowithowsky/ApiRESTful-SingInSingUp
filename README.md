@@ -53,7 +53,7 @@ __SingIn recebe um objeto JSON com E-mail e Senha.__<br>
 ```
 {
 	"email": "test@test.com.br",
-	"senha": "picapau"
+	"senha": "test"
 }
 ```
 
